@@ -35,6 +35,8 @@ set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%
 set undofile
 set undodir=/tmp
 
+let g:python3_host_prog = expand('/usr/bin/python3')
+
 " ----- ここからdein.vimの設定 -----
 if &compatible
   set nocompatible
@@ -54,14 +56,18 @@ if dein#load_state('~/.cache/dein')
 
   " 追加プラグイン
   call dein#add('scrooloose/nerdtree')
+  call dein#add('Shougo/denite.nvim')
+  call dein#add('jacoborus/tender.vim')
 
   call dein#end()
-  if dein#check_install()
-    call dein#install()
-  endif
   call dein#save_state()
 endif
 
+if dein#check_install()
+  call dein#install()
+endif
+
 filetype plugin indent on
+colorscheme tender
 syntax enable
 
