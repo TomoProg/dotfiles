@@ -35,5 +35,8 @@ set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%
 set undofile
 set undodir=/tmp
 
+" 検索ハイライトの削除
+nnoremap <ESC><ESC> :noh<cr>
+
 " プラグインON
 filetype plugin indent on

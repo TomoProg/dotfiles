@@ -35,6 +35,9 @@ set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%
 set undofile
 set undodir=/tmp
 
+" 検索ハイライトの削除
+nnoremap <ESC><ESC> :noh<cr>
+
 let g:python3_host_prog = expand('/usr/bin/python3')
 
 " ----- ここからdein.vimの設定 -----
@@ -58,6 +61,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('scrooloose/nerdtree')
   call dein#add('Shougo/denite.nvim')
   call dein#add('jacoborus/tender.vim')
+  call dein#add('elixir-editors/vim-elixir')
 
   call dein#end()
   call dein#save_state()
