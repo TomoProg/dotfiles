@@ -36,8 +36,6 @@ set undofile
 set undodir=/tmp
 
 " クリップボードにコピーする
-nnoremap <Space>d "*dd
-vnoremap <Space>d "*dd
 nnoremap <Space>y "*yy
 vnoremap <Space>y "*yy
 
