@@ -35,6 +35,12 @@ set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%
 set undofile
 set undodir=/tmp
 
+" クリップボードにコピーする
+nnoremap <Space>d "*dd
+vnoremap <Space>d "*dd
+nnoremap <Space>y "*yy
+vnoremap <Space>y "*yy
+
 " 検索ハイライトの削除
 nnoremap <ESC><ESC> :noh<cr>
 
@@ -58,9 +64,14 @@ if dein#load_state('~/.cache/dein')
   endif
 
   " 追加プラグイン
+  " ファイルツリー
   call dein#add('scrooloose/nerdtree')
   call dein#add('Shougo/denite.nvim')
+  " カラースキーマ
   call dein#add('jacoborus/tender.vim')
+  call dein#add('morhetz/gruvbox')
+  call dein#add('tomasr/molokai', {'merged': 0})
+
   call dein#add('elixir-editors/vim-elixir')
 
   call dein#end()
@@ -72,6 +83,9 @@ if dein#check_install()
 endif
 
 filetype plugin indent on
-colorscheme tender
+"colorscheme tender
+"set background=dark    " Setting dark mode
+colorscheme gruvbox
+"colorscheme molokai
 syntax enable
 

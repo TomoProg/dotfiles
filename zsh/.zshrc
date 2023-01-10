@@ -1,5 +1,9 @@
+# lsコマンドを色付きで表示
+alias ls='ls --color'
+
 # vimコマンドでnvimを呼ぶように変更
 alias vim='nvim'
+alias vi='nvim'
 
 # Ctrl + Sの画面停止機能を無効化
 stty stop undef 
