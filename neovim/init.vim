@@ -36,8 +36,9 @@ set undofile
 set undodir=/tmp
 
 " クリップボードにコピーする
-nnoremap <Space>y "*yy
-vnoremap <Space>y "*yy
+" nnoremap <Space>y "*yy
+" vnoremap <Space>y "*yy
+set clipboard+=unnamed
 
 " 検索ハイライトの削除
 nnoremap <ESC><ESC> :noh<cr>
