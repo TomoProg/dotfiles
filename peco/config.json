@@ -1,0 +1,6 @@
+{
+  "Keymap": {
+    "Space": "peco.ToggleSelectionAndSelectNext"
+  }
+}
+
